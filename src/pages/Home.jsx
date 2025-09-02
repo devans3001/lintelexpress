@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import Hero from '../components/Hero';
-import ProductCard from '../components/ProductCard';
+import Hero from '../components/hero';
+import ProductCard from '../components/productCard';
 import { Users, Globe, Award, Truck } from 'lucide-react';
 
 const Home = () => {
