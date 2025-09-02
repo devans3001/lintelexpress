@@ -36,7 +36,7 @@ const Navbar = () => {
                 key={item.name}
                 to={item.path}
                  onClick={handleScrollTop}
-                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                className={`px-3 py-2 text-sm font-bold transition-colors duration-200 ${
                   location.pathname === item.path
                     ? 'text-blue-600 border-b-2 border-blue-600'
                     : 'text-gray-700 hover:text-blue-600'
