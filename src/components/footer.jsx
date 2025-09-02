@@ -23,9 +23,9 @@ import { Link } from 'react-router-dom';
     ];
 
     const contactItems = [
-      { icon: Phone, text: '+1 (555) 123-4567' },
-      { icon: Mail, text: 'info@lintelexpress.com' },
-      { icon: MapPin, text: '123 Export Plaza, Trade City, TC 12345' },
+      { icon: Phone, text: (<><span>+234 806 588 8050</span><br /><span>+234 810 344 6899</span></>) },
+      { icon: Mail, text: 'contact@lintelexpress.com' },
+      { icon: MapPin, text: 'NO 1B UWAOMA CLOSE, OYIGBO, RIVERS STATE, NIGERIA' },
     ];
 
     return (
@@ -34,7 +34,7 @@ import { Link } from 'react-router-dom';
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <Truck className="h-8 w-8 text-green-500" />
+                <Truck className="h-8 w-8 text-blue-500" />
                 <span className="text-2xl font-bold">LintelExpress</span>
               </div>
               <p className="text-gray-300 mb-4 max-w-md">
@@ -44,7 +44,7 @@ import { Link } from 'react-router-dom';
               <div className="space-y-2">
                 {contactItems.map(({ icon: Icon, text }, idx) => (
                   <div className="flex items-center space-x-2" key={idx}>
-                    <Icon className="h-4 w-4 text-green-500" />
+                    <Icon className="h-4 w-4 text-blue-500" />
                     <span className="text-sm">{text}</span>
                   </div>
                 ))}
@@ -59,7 +59,7 @@ import { Link } from 'react-router-dom';
                     <Link
                       to={to}
                       onClick={handleScrollTop}
-                      className="text-gray-300 hover:text-green-500 transition-colors"
+                      className="text-gray-300 hover:text-blue-500 transition-colors"
                     >
                       {label}
                     </Link>
@@ -78,9 +78,9 @@ import { Link } from 'react-router-dom';
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <div className="border-t border-gray-700 mt-4 pt-4 text-center">
             <p className="text-gray-300">
-              © 2024 LintelExpress. All rights reserved. | Exporting Quality Agricultural Products Worldwide
+              © {new Date().getFullYear()} LintelExpress. All rights reserved. | Exporting Quality Agricultural Products Worldwide
             </p>
           </div>
         </div>

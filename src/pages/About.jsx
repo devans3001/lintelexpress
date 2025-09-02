@@ -5,7 +5,7 @@ import { Target } from "lucide-react";
 const About = () => {
   return (
     <div className="pt-16">
-      <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,7 +87,7 @@ const About = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="text-center bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow"
                 >
-                  <IconComponent className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                  <IconComponent className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {value.title}
                   </h3>
@@ -116,7 +116,7 @@ const About = () => {
                 and communities worldwide.
               </p>
               <div className="flex items-center space-x-4">
-                <Target className="h-8 w-8 text-green-600" />
+                <Target className="h-8 w-8 text-blue-600" />
                 <div>
                   <h3 className="font-semibold text-gray-900">Our Vision</h3>
                   <p className="text-gray-600">

@@ -40,22 +40,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <MapPin className="w-6 h-6 text-green-600" />,
+      icon: <MapPin className="w-6 h-6 text-blue-600" />,
       title: "Head Office",
-      details: ["123 Export Plaza, Trade District", "Mumbai, Maharashtra 400001", "India"]
+      details: ["NO 1B UWAOMA CLOSE, OYIGBO", "RIVERS STATE", "NIGERIA"]
     },
     {
-      icon: <Phone className="w-6 h-6 text-green-600" />,
+      icon: <Phone className="w-6 h-6 text-blue-600" />,
       title: "Phone Numbers",
-      details: ["+91 22 1234 5678", "+91 98765 43210", "Toll Free: 1800 123 4567"]
+      details: ["+234 806 588 8050", "+234 810 344 6899"]
     },
     {
-      icon: <Mail className="w-6 h-6 text-green-600" />,
+      icon: <Mail className="w-6 h-6 text-blue-600" />,
       title: "Email Addresses",
-      details: ["info@lintelexpress.com", "exports@lintelexpress.com", "support@lintelexpress.com"]
+      details: ["info@lintelexpress.com", "contact@lintelexpress.com"]
     },
     {
-      icon: <Clock className="w-6 h-6 text-green-600" />,
+      icon: <Clock className="w-6 h-6 text-blue-600" />,
       title: "Business Hours",
       details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 9:00 AM - 2:00 PM", "Sunday: Closed"]
     }
@@ -91,7 +91,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -100,7 +100,7 @@ const Contact = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
               Get in touch for export inquiries, partnerships, and agricultural trade opportunities
             </p>
           </motion.div>
@@ -130,7 +130,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your full name"
                     />
                   </div>
@@ -144,7 +144,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your company name"
                     />
                   </div>
@@ -173,7 +173,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="+91 98765 43210"
                     />
                   </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                       name="product"
                       value={formData.product}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="">Select a product</option>
                       <option value="rice">Rice</option>
@@ -209,7 +209,7 @@ const Contact = () => {
                       name="quantity"
                       value={formData.quantity}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="e.g., 100 tons"
                     />
                   </div>
@@ -224,7 +224,7 @@ const Contact = () => {
                     name="destination"
                     value={formData.destination}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Destination country"
                   />
                 </div>
@@ -238,14 +238,14 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your requirements..."
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors duration-300 flex items-center justify-center"
+                  className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center"
                 >
                   <Send className="w-5 h-5 mr-2" />
                   Send Inquiry
@@ -324,8 +324,8 @@ const Contact = () => {
                 </h3>
                 <div className="space-y-2 text-sm text-gray-600">
                   <p>{office.address}</p>
-                  <p className="font-medium text-green-600">{office.phone}</p>
-                  <p className="text-green-600">{office.email}</p>
+                  <p className="font-medium text-blue-600">{office.phone}</p>
+                  <p className="text-blue-600">{office.email}</p>
                 </div>
               </motion.div>
             ))}

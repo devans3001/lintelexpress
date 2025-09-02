@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import ProductCard from "../components/productCard";
+import ProductCard from "../components/ProductCard";
 import { Search, Filter } from "lucide-react";
 import { products } from "../helper/data";
 
@@ -8,7 +8,16 @@ const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Grains", "Spices", "Pulses"];
+  const categories = [
+    "All",
+    "Oilseeds",
+    "Oils",
+    "Commodities",
+    "Spices",
+    "Herbs",
+    "Grains",
+    "Pulses",
+  ];
 
   const filteredProducts = products.filter((product) => {
     const matchesSearch = product.name
@@ -21,7 +30,7 @@ const Products = () => {
 
   return (
     <div className="pt-16">
-      <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-sky-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -29,11 +38,12 @@ const Products = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Products
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-heading">
+              Our Premium Products
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
               Discover our comprehensive range of premium agricultural products,
+              including soya, sesame, palm oil, cocoa, ginger, and hibiscus,
               carefully selected and quality-tested for international markets.
             </p>
           </motion.div>
@@ -46,7 +56,7 @@ const Products = () => {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent font-body"
               />
             </div>
             <div className="relative">
@@ -54,7 +64,7 @@ const Products = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="pl-10 pr-8 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none bg-white"
+                className="pl-10 pr-8 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none bg-white font-body"
               >
                 {categories.map((category) => (
                   <option key={category} value={category}>
@@ -75,11 +85,16 @@ const Products = () => {
             ))}
           </div>
           {filteredProducts.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-xl text-gray-600">
+            <motion.div
+              className="text-center py-12"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              <p className="text-xl text-gray-600 font-body">
                 No products found matching your criteria.
               </p>
-            </div>
+            </motion.div>
           )}
         </div>
       </section>
