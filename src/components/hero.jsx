@@ -1,8 +1,6 @@
-
-
-import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Truck, Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import { ArrowRight, Globe, Truck, Shield, TruckElectric } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,18 +14,25 @@ const Hero = () => {
             className="space-y-6"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              Premium <span className="text-blue-600">Agricultural</span> Exports
+              Premium <span className="text-blue-600">Global</span>{" "}
+              Exports
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
+              At Lintel Express, we supply healthy, quality, organic,
+              unadulterated and durable items with little or no stress. making
+              goods and services available and at your convenience is our
+              priority.
+            </p>
+            {/* <p className="text-xl text-gray-600 leading-relaxed">
               Connecting global markets with the finest agro-based products. 
               From farm to international destinations with quality assurance and reliable logistics.
-            </p>
+            </p> */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/products"
+                to="/services"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
               >
-                <span>View Products</span>
+                <span>View Services</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
@@ -47,22 +52,28 @@ const Hero = () => {
           >
             <div className="bg-white rounded-2xl shadow-2xl p-8">
               <img
-                src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Agricultural products"
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center">
                   <Globe className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-gray-700">Global Reach</p>
+                  <p className="text-sm font-semibold text-gray-700">
+                    Global Reach
+                  </p>
                 </div>
                 <div className="text-center">
-                  <Truck className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-gray-700">Fast Delivery</p>
+                  <TruckElectric className="h-8 w-8 text-blue-400 mx-auto mb-2" />
+                  <p className="text-sm font-semibold text-gray-700">
+                    Fast Delivery
+                  </p>
                 </div>
                 <div className="text-center">
                   <Shield className="h-8 w-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-gray-700">Quality Assured</p>
+                  <p className="text-sm font-semibold text-gray-700">
+                    Quality Assured
+                  </p>
                 </div>
               </div>
             </div>

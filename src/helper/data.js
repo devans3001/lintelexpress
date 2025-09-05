@@ -87,23 +87,18 @@ export const products = [
 
 export const services = [
   {
-    icon: Ship,
-    className: "w-12 h-12 text-blue-600",
-    title: "Export Services",
-    description: "Comprehensive export solutions for agricultural products with end-to-end documentation and compliance support.",
-    features: ["International shipping", "Export documentation", "Compliance management"]
-  },
-  {
     icon: Package,
     className: "w-12 h-12 text-blue-600",
-    title: "Import Services",
+    title: "Import & Export",
+    link: "/services/import-export",
     description: "Efficient import operations with customs clearance, quality inspection, and timely delivery to your facilities.",
     features: ["Customs clearance", "Quality inspection", "Warehouse management"]
   },
   {
     icon: Truck,
     title: "Freight Forwarding",
-     className: "w-12 h-12 text-blue-600",
+    className: "w-12 h-12 text-blue-600",
+    link: "/services/freight-forwarding",
     description: "Professional freight forwarding services by sea, air, and land with competitive rates and reliable scheduling.",
     features: ["Sea freight", "Air freight", "Land transportation"]
   },
@@ -111,20 +106,15 @@ export const services = [
     icon: FileText,
     className: "w-12 h-12 text-blue-600",
     title: "Customs Brokerage",
+    link: "/services/custom-brokerage",
     description: "Expert customs brokerage services ensuring smooth clearance and compliance with international trade regulations.",
     features: ["Duty calculation", "Permit processing", "Regulatory compliance"]
-  },
-  {
-    icon: Anchor,
-    className: "w-12 h-12 text-blue-600",
-    title: "P & I Services",
-    description: "Protection and Indemnity services providing comprehensive marine insurance coverage for cargo protection.",
-    features: ["Marine insurance", "Cargo protection", "Risk assessment"]
   },
   {
     icon: MapPin,
     className: "w-12 h-12 text-blue-600",
     title: "Distribution",
+    link: "/services/distribution",
     description: "Strategic distribution network ensuring your products reach target markets efficiently and cost-effectively.",
     features: ["Network management", "Route optimization", "Market penetration"]
   },
@@ -132,16 +122,18 @@ export const services = [
     icon: BarChart3,
     className: "w-12 h-12 text-blue-600",
     title: "Logistics Solutions",
+    link: "/services/logistics-solutions",
     description: "Integrated logistics solutions from warehousing to last-mile delivery with real-time tracking capabilities.",
     features: ["Warehouse management", "Inventory control", "Supply chain optimization"]
   },
   {
     icon: Globe,
     className: "w-12 h-12 text-blue-600",
-    title: "Handling Services",
-    description: "Professional cargo handling services ensuring safe loading, unloading, and storage of agricultural products.",
-    features: ["Cargo handling", "Storage solutions", "Quality preservation"]
-  },
+    title: "Chandling Services",
+    link: "/services/chandling",
+    description: "Supplying ships with necessary provisions and equipment while they are at port, including food, fuel, lubricants, spare parts, and other goods and services.",
+    features: ["Ship provisioning", "Fuel and lubricants", "Port services"]
+  }
 ];
 
 export const values = [

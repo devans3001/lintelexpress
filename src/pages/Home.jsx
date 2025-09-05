@@ -1,51 +1,56 @@
-import { motion } from 'framer-motion';
-import Hero from '../components/hero';
-import ProductCard from '../components/productCard';
-import { Users, Globe, Award, Truck } from 'lucide-react';
-import QuoteButton from '../components/quoteButton';
+import { motion } from "framer-motion";
+import Hero from "../components/hero";
+import ProductCard from "../components/productCard";
+import { Users, Globe, Award, Truck, MapPin, BarChart3 } from "lucide-react";
+import QuoteButton from "../components/quoteButton";
+import Testimonial from "../components/testimonial";
 
 const Home = () => {
   const featuredProducts = [
-   {
-    id: 1,
-    name: 'Premium Soya Beans',
-    category: 'Oilseeds',
-    description: 'High-protein soya beans with excellent oil content, perfect for processing and international trade markets.',
-    image: 'https://images.unsplash.com/photo-1612504258838-fbf14fe4437d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UHJlbWl1bSUyMFNveWElMjBCZWFuc3xlbnwwfHwwfHx8MA%3D%3D',
-    origin: 'Brazil',
-    quality: 'Grade A'
-  },
-  {
-    id: 2,
-    name: 'Organic Sesame Seeds',
-    category: 'Oilseeds',
-    description: 'Premium quality organic sesame seeds with high oil content and natural flavor, certified for international markets.',
-    image: 'https://plus.unsplash.com/premium_photo-1674654419483-e9b8c9d2f3df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fE9yZ2FuaWMlMjBTZXNhbWUlMjBTZWVkc3xlbnwwfHwwfHx8MA%3D%3D',
-    origin: 'Sudan',
-    quality: 'Organic'
-  },
-  {
-    id: 3,
-    name: 'Refined Palm Oil',
-    category: 'Oils',
-    description: 'High-quality refined palm oil with excellent stability and neutral taste, ideal for food processing industries.',
-    image: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    origin: 'Malaysia',
-    quality: 'Premium'
-  },
+    {
+      id: 1,
+      name: "Distributions",
+      icon: MapPin,
+      description:
+        "Strategic distribution network ensuring your products reach target markets efficiently and cost-effectively.",
+      image: "/distribution.png",
+      link: "/services/distribution",
+      quality: "Grade A",
+    },
+    {
+      id: 2,
+      name: "Logistics Solutions",
+      icon: BarChart3,
+      description:
+        "Integrated logistics solutions from warehousing to last-mile delivery with real-time tracking capabilities.",
+      image: "/logistics.png",
+      link: "/services/logistics-solutions",
+      quality: "Grade A",
+    },
+    {
+      id: 3,
+      name: "Freight Forwarding",
+      icon: Truck,
+      description:
+        "Professional freight forwarding services by sea, air, and land with competitive rates and reliable scheduling.",
+      image:
+        "/forwarding.png",
+      link: "/services/freight-forwarding",
+      quality: "Grade A",
+    },
   ];
 
   const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Globe, value: '25+', label: 'Countries' },
-    { icon: Award, value: '15+', label: 'Years Experience' },
-    { icon: Truck, value: '1000+', label: 'Shipments' }
+    { icon: Users, value: "500+", label: "Happy Clients" },
+    { icon: Globe, value: "25+", label: "Countries" },
+    { icon: Award, value: "15+", label: "Years Experience" },
+    { icon: Truck, value: "1000+", label: "Shipments" },
   ];
 
   return (
     <div>
       <Hero />
-      
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -60,7 +65,9 @@ const Home = () => {
                   className="text-center"
                 >
                   <IconComponent className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                    {stat.value}
+                  </h3>
                   <p className="text-gray-600">{stat.label}</p>
                 </motion.div>
               );
@@ -78,10 +85,11 @@ const Home = () => {
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Products
+              A Wide Range of Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our premium selection of agricultural products, carefully sourced and quality-tested for international markets.
+              Lintel Express provides comprehensive logistics and trade
+              solutions to meet all your import and export needs.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -92,6 +100,7 @@ const Home = () => {
         </div>
       </section>
 
+      <Testimonial />
       <section className="py-16 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -100,15 +109,14 @@ const Home = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Export Your Products?
+              Streamline Your Customs Process
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who trust LintelExpress for their agricultural export needs.
+              We act as your liaison with customs and port authorities,
+              providing expert advice on laws and procedures to avoid delays and{" "}
+              <strong>minimize costs</strong>.
             </p>
-              <QuoteButton
-              variant="secondary"
-              size="large"
-            >
+            <QuoteButton variant="secondary" size="large">
               <span>Start Your Export Journey</span>
             </QuoteButton>
           </motion.div>

@@ -1,40 +1,40 @@
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, Globe } from 'lucide-react';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock, Send, Globe } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    product: '',
-    quantity: '',
-    destination: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    quantity: "",
+    destination: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Handle form submission logic here
-    alert('Thank you for your inquiry! We will contact you soon.');
+    alert("Thank you for your inquiry! We will contact you soon.");
     setFormData({
-      name: '',
-      email: '',
-      company: '',
-      phone: '',
-      product: '',
-      quantity: '',
-      destination: '',
-      message: ''
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      service: "",
+      quantity: "",
+      destination: "",
+      message: "",
     });
   };
 
@@ -42,23 +42,27 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6 text-blue-600" />,
       title: "Head Office",
-      details: ["NO 1B UWAOMA CLOSE, OYIGBO", "RIVERS STATE", "NIGERIA"]
+      details: ["NO 1B UWAOMA CLOSE, OYIGBO", "RIVERS STATE", "NIGERIA"],
     },
     {
       icon: <Phone className="w-6 h-6 text-blue-600" />,
       title: "Phone Numbers",
-      details: ["+234 806 588 8050", "+234 810 344 6899"]
+      details: ["+234 806 588 8050", "+234 810 344 6899"],
     },
     {
       icon: <Mail className="w-6 h-6 text-blue-600" />,
       title: "Email Addresses",
-      details: ["info@lintelexpress.com", "contact@lintelexpress.com"]
+      details: ["info@lintelexpress.com", "contact@lintelexpress.com"],
     },
     {
       icon: <Clock className="w-6 h-6 text-blue-600" />,
       title: "Business Hours",
-      details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 9:00 AM - 2:00 PM", "Sunday: Closed"]
-    }
+      details: [
+        "Monday - Friday: 9:00 AM - 6:00 PM",
+        "Saturday: 9:00 AM - 2:00 PM",
+        "Sunday: Closed",
+      ],
+    },
   ];
 
   const offices = [
@@ -66,26 +70,26 @@ const Contact = () => {
       city: "Mumbai",
       address: "123 Export Plaza, Trade District",
       phone: "+91 22 1234 5678",
-      email: "mumbai@lintelexpress.com"
+      email: "mumbai@lintelexpress.com",
     },
     {
       city: "Delhi",
       address: "456 Business Center, Connaught Place",
       phone: "+91 11 9876 5432",
-      email: "delhi@lintelexpress.com"
+      email: "delhi@lintelexpress.com",
     },
     {
       city: "Chennai",
       address: "789 Port Road, Anna Nagar",
       phone: "+91 44 5555 6666",
-      email: "chennai@lintelexpress.com"
+      email: "chennai@lintelexpress.com",
     },
     {
       city: "Kolkata",
       address: "321 Trade Hub, Salt Lake City",
       phone: "+91 33 7777 8888",
-      email: "kolkata@lintelexpress.com"
-    }
+      email: "kolkata@lintelexpress.com",
+    },
   ];
 
   return (
@@ -101,7 +105,8 @@ const Contact = () => {
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Get in touch for export inquiries, partnerships, and agricultural trade opportunities
+              Get in touch for export inquiries, partnerships, and agricultural
+              trade opportunities
             </p>
           </motion.div>
         </div>
@@ -117,7 +122,9 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us an Inquiry</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Send Us an Inquiry
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -149,7 +156,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -182,22 +189,25 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Product Interest
+                      Service Interest
                     </label>
                     <select
-                      name="product"
-                      value={formData.product}
+                      name="service"
+                      value={formData.service}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
-                      <option value="">Select a product</option>
-                      <option value="rice">Rice</option>
-                      <option value="wheat">Wheat</option>
-                      <option value="spices">Spices</option>
-                      <option value="pulses">Pulses</option>
-                      <option value="tea">Tea</option>
-                      <option value="coffee">Coffee</option>
-                      <option value="other">Other</option>
+                      <option value="">Select a Service</option>
+                      {[
+                        "Distrubution",
+                        "Import and Export",
+                        "Logistics Solution",
+                        "Chandling",
+                        "Freight Forwarding",
+                        "Custom Brokerage",
+                      ].map((ele) => (
+                        <option value={ele.split(" ").join("_")}>{ele}</option>
+                      ))}
                     </select>
                   </div>
                   <div>
@@ -259,13 +269,13 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Get in Touch
+              </h2>
               <div className="space-y-8">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="flex-shrink-0 mr-4">
-                      {info.icon}
-                    </div>
+                    <div className="flex-shrink-0 mr-4">{info.icon}</div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {info.title}
@@ -285,7 +295,9 @@ const Contact = () => {
                 <div className="text-center">
                   <Globe className="w-12 h-12 text-gray-400 mx-auto mb-2" />
                   <p className="text-gray-500">Interactive Map</p>
-                  <p className="text-sm text-gray-400">Location: Mumbai, India</p>
+                  <p className="text-sm text-gray-400">
+                    Location: Mumbai, India
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -306,7 +318,8 @@ const Contact = () => {
               Our Office Locations
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Visit us at any of our offices across India for personalized export solutions.
+              Visit us at any of our offices across India for personalized
+              export solutions.
             </p>
           </motion.div>
 
