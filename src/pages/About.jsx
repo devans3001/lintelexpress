@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import { values } from "../helper/data";
 import { Target } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
+    <>
+    <Helmet>
+        <title>About Us | LintelExpress</title>
+      </Helmet>
     <div className="pt-16">
       <section className="py-16 bg-gradient-to-br from-blue-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,10 +21,14 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About LintelExpress
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading the way in agricultural exports with over 15 years of
               experience in connecting global markets with premium agro-based
               products.
+            </p> */}
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading the way in supply chain services with over 7 years of
+              experience in connecting bussinessess and companies with premium global supply chain.
             </p>
           </motion.div>
 
@@ -30,7 +39,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757163021/about1_1_jjzgw0.jpg"
                 alt="Agricultural warehouse"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />
@@ -43,16 +52,13 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold text-gray-900">Our Story</h2>
               <p className="text-gray-600 leading-relaxed">
-                Founded in 2009, LintelExpress began as a small agricultural
-                trading company with a vision to connect local farmers with
-                global markets. Today, we have grown into a trusted export
+                Founded in 2018, LintelExpress began as a small supply chain company with a vision to connect businesses with
+                supply chain services. Today, we have grown into a trusted supply
                 partner, serving over 500 clients across 25+ countries.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Our commitment to quality, reliability, and customer
-                satisfaction has made us a preferred choice for agricultural
-                exports. We specialize in rice, spices, pulses, and other
-                agro-based products, ensuring each shipment meets international
+                satisfaction has made us a preferred choice for supply chain services. We specialize in various supply chain services ranging from import and export services to Freight Forwarding, ensuring each shipment meets international
                 quality standards.
               </p>
             </motion.div>
@@ -73,7 +79,7 @@ const About = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               These principles guide everything we do and define our commitment
-              to excellence in agricultural exports.
+              to excellence in supply chain.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -132,7 +138,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757162820/6243815_tmiqoy.jpg"
                 alt="Global agriculture"
                 className="w-full h-96 object-cover rounded-2xl shadow-lg"
               />
@@ -141,6 +147,8 @@ const About = () => {
         </div>
       </section>
     </div>
+    </>
+
   );
 };
 

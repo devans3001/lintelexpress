@@ -4,6 +4,7 @@ import ProductCard from "../components/productCard";
 import { Users, Globe, Award, Truck, MapPin, BarChart3 } from "lucide-react";
 import QuoteButton from "../components/quoteButton";
 import Testimonial from "../components/testimonial";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const featuredProducts = [
@@ -13,7 +14,7 @@ const Home = () => {
       icon: MapPin,
       description:
         "Strategic distribution network ensuring your products reach target markets efficiently and cost-effectively.",
-      image: "/distribution.png",
+      image: "https://res.cloudinary.com/drsjzibcr/image/upload/v1757076843/distribution_camdwc.png",
       link: "/services/distribution",
       quality: "Grade A",
     },
@@ -23,7 +24,7 @@ const Home = () => {
       icon: BarChart3,
       description:
         "Integrated logistics solutions from warehousing to last-mile delivery with real-time tracking capabilities.",
-      image: "/logistics.png",
+      image: "https://res.cloudinary.com/drsjzibcr/image/upload/v1757076846/logistics_dktnpq.png",
       link: "/services/logistics-solutions",
       quality: "Grade A",
     },
@@ -34,24 +35,28 @@ const Home = () => {
       description:
         "Professional freight forwarding services by sea, air, and land with competitive rates and reliable scheduling.",
       image:
-        "/forwarding.png",
+        "https://res.cloudinary.com/drsjzibcr/image/upload/v1757076845/forwarding_wydkxa.png",
       link: "/services/freight-forwarding",
       quality: "Grade A",
     },
   ];
 
-  const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients" },
-    { icon: Globe, value: "25+", label: "Countries" },
-    { icon: Award, value: "15+", label: "Years Experience" },
-    { icon: Truck, value: "1000+", label: "Shipments" },
-  ];
+  // const stats = [
+  //   { icon: Users, value: "500+", label: "Happy Clients" },
+  //   { icon: Globe, value: "25+", label: "Countries" },
+  //   { icon: Award, value: "15+", label: "Years Experience" },
+  //   { icon: Truck, value: "1000+", label: "Shipments" },
+  // ];
 
   return (
+    <>
+    <Helmet>
+        <title>Home | LintelExpress</title>
+      </Helmet>
     <div>
       <Hero />
 
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
@@ -74,7 +79,7 @@ const Home = () => {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -100,7 +105,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Testimonial />
+      {/* <Testimonial /> */}
       <section className="py-16 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -123,6 +128,8 @@ const Home = () => {
         </div>
       </section>
     </div>
+    </>
+
   );
 };
 

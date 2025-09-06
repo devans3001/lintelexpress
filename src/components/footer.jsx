@@ -6,17 +6,18 @@ const Footer = () => {
   const quickLinks = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About Us" },
-    // { to: "/products", label: "Products" },
+    // { to: "/services", label: "services" },
     { to: "/services", label: "Services" },
     { to: "/contact", label: "Contact" },
   ];
 
-  const products = [
-    "Rice & Grains",
-    "Spices & Herbs",
-    "Pulses & Legumes",
-    "Fresh Produce",
-    "Processed Foods",
+  const services = [
+    { label: "Import & Export", path: "/services/import-export" },
+    { label: "Chandling", path: "/services/chandling" },
+    { label: "Freight Forwarding", path: "/services/freight-forwarding" },
+    { label: "Customs Brokerage", path: "/services/custom-brokerage" },
+    { label: "Distribution", path: "/services/distribution" },
+    { label: "Logistics Solutions", path: "/services/logistics-solutions" },
   ];
 
   const contactItems = [
@@ -44,9 +45,10 @@ const Footer = () => {
               <span className="text-2xl font-bold">LintelExpress</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Leading agricultural export company specializing in high-quality
-              agro-based goods. Connecting farmers to global markets with
-              reliable and efficient export services.
+              Leading supply chain company specializing in{" "}
+              {services.map((ele) => ele.label).join(", ")}. We are committed to
+              delivering excellence and quality service to our clients
+              worldwide.
             </p>
             <div className="space-y-2">
               {contactItems.map(({ icon: Icon, text }, idx) => (
@@ -76,10 +78,19 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Our Products</h3>
+            <h3 className="text-lg font-semibold mb-4">Our services</h3>
             <ul className="space-y-2 text-gray-300">
-              {products.map((p) => (
-                <li key={p}>{p}</li>
+              {services.map((p) => (
+                <li>
+                  <Link
+                    key={p.label}
+                    to={p.path}
+                    onClick={handleScrollTop}
+                    className="hover:text-blue-500 transition-colors"
+                  >
+                    {p.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -88,7 +99,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-4 pt-4 text-center">
           <p className="text-gray-300">
             © {new Date().getFullYear()} LintelExpress. All rights reserved. |
-            Exporting Quality Agricultural Products Worldwide
+            Suoply chain services Worldwide
           </p>
         </div>
       </div>

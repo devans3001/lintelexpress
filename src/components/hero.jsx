@@ -15,7 +15,7 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
               Premium <span className="text-blue-600">Global</span>{" "}
-              Exports
+              Supply Chain
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               At Lintel Express, we supply healthy, quality, organic,

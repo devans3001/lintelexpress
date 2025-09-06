@@ -10,7 +10,7 @@ const Navbar = () => {
   const location = useLocation();
    const handleScrollTop = () => window.scrollTo(0, 0);
 
- console.log(location)
+//  console.log(location)
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-green-600 focus:outline-none"
+              className="text-gray-700 hover:text-blue-600 focus:outline-none"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -73,8 +73,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 text-base font-medium transition-colors duration-200 ${
                   location.pathname === item.path
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                 }`}
               >
                 {item.name}

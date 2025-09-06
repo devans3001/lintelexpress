@@ -4,6 +4,7 @@ import { services } from "../helper/data";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { handleScrollTop } from "../helper/helper";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
   const processSteps = [
@@ -40,6 +41,10 @@ const Services = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+        <title>Services | LintelExpress</title>
+      </Helmet>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
@@ -200,6 +205,8 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
+
   );
 };
 export default Services;

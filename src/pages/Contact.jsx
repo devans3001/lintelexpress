@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock, Send, Globe } from "lucide-react";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -93,6 +94,10 @@ const Contact = () => {
   ];
 
   return (
+    <>
+    <Helmet>
+        <title>Contact | LintelExpress</title>
+      </Helmet>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-20">
@@ -291,7 +296,7 @@ const Contact = () => {
               </div>
 
               {/* Map Placeholder */}
-              <div className="mt-8 bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+              {/* <div className="mt-8 bg-gray-200 rounded-lg h-64 flex items-center justify-center">
                 <div className="text-center">
                   <Globe className="w-12 h-12 text-gray-400 mx-auto mb-2" />
                   <p className="text-gray-500">Interactive Map</p>
@@ -299,14 +304,14 @@ const Contact = () => {
                     Location: Mumbai, India
                   </p>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Office Locations */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -344,8 +349,10 @@ const Contact = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
+    </>
+
   );
 };
 

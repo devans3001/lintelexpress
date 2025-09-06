@@ -97,11 +97,11 @@ const Chandling = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757162384/chandling_1_eoxjne.jpg"
                 alt="Ship Chandling Services"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute inset-0 bg-blue-600 bg-opacity-20 rounded-lg"></div>
+              <div className="absolute  bg-blue-600 bg-opacity-20 rounded-lg"></div>
             </motion.div>
           </div>
         </div>

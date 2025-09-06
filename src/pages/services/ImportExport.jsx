@@ -96,11 +96,11 @@ const ImportExport = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757159928/import-export_xq0ivw.jpg"
                 alt="Import Export Operations"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute inset-0 bg-blue-600 bg-opacity-20 rounded-lg"></div>
+              <div className="absolute z-50 top-0 left-0 opacity-30 bg-blue-600 bg-opacity-20 rounded-lg"></div>
             </motion.div>
           </div>
         </div>

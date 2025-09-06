@@ -126,11 +126,11 @@ const LogisticsSolutions = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757162394/logistics_1_tebfgo.jpg"
                 alt="Logistics Solutions"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
-              <div className="absolute inset-0 bg-blue-600 bg-opacity-20 rounded-lg"></div>
+              <div className="absolute bg-blue-600 bg-opacity-20 rounded-lg"></div>
             </motion.div>
           </div>
         </div>
