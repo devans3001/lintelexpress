@@ -25,8 +25,9 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2"  onClick={handleScrollTop}>
-              <Truck className="h-8 w-8 text-blue-600" />
-              <span className="text-2xl font-bold text-gray-800">LintelExpress</span>
+              <img src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757274469/hhh-removebg-preview_vau9ef.png" className="h-20 w-20 " />
+              {/* <Truck className="h-8 w-8 text-blue-600" /> */}
+              {/* <span className="text-2xl font-bold text-gray-800">LintelExpress</span> */}
             </Link>
           </div>
 

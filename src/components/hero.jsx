@@ -52,7 +52,7 @@ const Hero = () => {
           >
             <div className="bg-white rounded-2xl shadow-2xl p-8">
               <img
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://res.cloudinary.com/drsjzibcr/image/upload/v1757321043/6269876_rxkczv.jpg"
                 alt="Agricultural products"
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />

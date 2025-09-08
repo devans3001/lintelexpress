@@ -99,7 +99,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-4 pt-4 text-center">
           <p className="text-gray-300">
             © {new Date().getFullYear()} LintelExpress. All rights reserved. |
-            Suoply chain services Worldwide
+            Supply chain services Worldwide
           </p>
         </div>
       </div>
